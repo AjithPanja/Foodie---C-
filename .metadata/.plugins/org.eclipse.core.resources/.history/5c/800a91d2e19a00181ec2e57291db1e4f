@@ -1,0 +1,58 @@
+package Foods;
+import java.util.Scanner;
+public class veg {
+	String item[] = new String[5];
+	int count[] = new int[5];
+	int price[] = new int[5];
+	int c = 0;
+	public void display_veg()
+	{
+		Scanner s = new Scanner(System.in);
+		int price_veg[] = new int[5];
+		String items_veg[] = new String[5];
+		items_veg[0] = "Dosa. ";
+	    price_veg[0] = 20;
+		items_veg[1] = "Idly. ";
+		price_veg[1] = 10;
+		items_veg[2] = "Chappathi. ";
+		price_veg[2] = 15;
+		items_veg[3] = "Masala Dosa. ";
+		price_veg[3] = 25;
+		items_veg[4] = "Egg Dosa. ";
+		price_veg[4] = 25;
+		int choice,n,check;
+		boolean b = true;
+		while(b)
+		{
+			for(int i=0;i<5;i++)
+			{
+				System.out.print((i+1) + " : " );
+				System.out.println(items_veg[i]);
+			}
+			System.out.print("Enter your Choice : ");
+			choice = s.nextInt();
+			System.out.print("Enter the no.of.Items :");
+			n = s.nextInt();
+			item[c] = items_veg[choice-1];
+			price[c] = price_veg[choice-1];
+			count[c++] = n;
+			System.out.println("1.Add another item or 2.Checkout :");
+			check = s.nextInt();
+			if(check==2)
+			{
+				display_veg_list();
+				break;
+			}
+		}
+	}
+	public void display_veg_list()
+	{float total = 0;
+		for(int j=0;j<c;j++)
+		{
+			System.out.println(item[j] + " " + count[j] + " * " + price[j]);
+			total = total + (price[j] * count[j]);
+		}
+		System.out.println("Total Price : " + total);
+		return;
+	}
+}
