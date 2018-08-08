@@ -9,6 +9,8 @@ public class veg {
 	{
 		Scanner s = new Scanner(System.in);
 		int price_veg[] = new int[5];
+		int p;
+		boolean flag = true;
 		String items_veg[] = new String[5];
 		items_veg[0] = "Dosa. ";
 		price_veg[0] = 20;
@@ -31,12 +33,41 @@ public class veg {
 			}
 			System.out.print("Enter your Choice : ");
 			choice = s.nextInt();
-			System.out.print("Enter the no.of.Items :");
-			n = s.nextInt();
-			item[c] = items_veg[choice-1];
-			price[c] = price_veg[choice-1];
-			count[c++] = n;
-			System.out.println("1.Add another item or 2.Checkout :");
+			for(int k =0;k<c;k++)
+			{if(item[k] == items_veg[choice-1])
+			{
+				System.out.println("Item Already in the cart...1.Wanna Modify ? 2.Wanna Delete ? 3.No");
+				p = s.nextInt();
+				if(p==1)
+				{
+					System.out.print("Enter the no.of.Items :");
+					n = s.nextInt();
+					count[k] = n;
+				}
+				if(p==2)
+				{
+					item[k] = "";
+					count[k] = 0;
+					price[k] = 0;
+					swap(k);
+				}
+				flag = false;
+				break;
+			}
+			else
+			{
+				flag = true;
+			}}
+			if(flag)
+			{
+				System.out.print("Enter the no.of.Items :");
+				n = s.nextInt();
+				item[c] = items_veg[choice-1];
+				price[c] = price_veg[choice-1];
+				count[c++] = n;
+			}
+			
+			System.out.print("1.Add another item or 2.Checkout :");
 			check = s.nextInt();
 			if(check==2)
 			{
@@ -62,5 +93,15 @@ public class veg {
 			count[j] = 0;
 			price[j] = 0;
 		}
+	}
+	public void swap(int k)
+	{
+		for(int x=k;x<c;x++)
+		{
+			item[x] = item[x+1];
+			count[x] = count[x+1];
+			price[x] = price[x+1];
+		}
+		c--;
 	}
 }

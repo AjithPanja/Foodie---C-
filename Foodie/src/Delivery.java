@@ -5,13 +5,12 @@ public class Delivery {
 	public void getAddr()
 	{
 		Scanner s = new Scanner(System.in);
-		System.out.println("Enter the Door no :");
+		System.out.print("Enter the Door no :");
 		door = s.nextInt();
 		s.nextLine();
-		System.out.println("Enter the Street Name :");
-		//s.next();
+		System.out.print("Enter the Street Name :");
 		street = s.nextLine();
-		System.out.println("Enter the Area Name :");
+		System.out.print("Enter the Area Name :");
 		area = s.nextLine();
 	}
 	public void display()

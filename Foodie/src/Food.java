@@ -85,7 +85,7 @@ class Hotel extends Food
 		veg v = new veg();
 		Delivery d = new Delivery();
 		nonveg nv = new nonveg();
-		System.out.println("1.Vegetarian or 2.Non-Vegetarian ... Enter your Choice :");
+		System.out.print("1.Vegetarian or 2.Non-Vegetarian ... Enter your Choice :");
 		i = s.nextInt();
 		if(i==1)
 		{
@@ -93,7 +93,7 @@ class Hotel extends Food
 			d.getAddr();
 			d.display();
 			v.display_veg_list();
-			System.out.println("1.Would like to place a Order ? 2.Clear Cart..");
+			System.out.print("1.Would like to place a Order ? 2.Clear Cart..");
 			j = s.nextInt();
 			if(j==1)
 			{
@@ -113,7 +113,7 @@ class Hotel extends Food
 			d.getAddr();
 			d.display();
 			nv.display_nonveg_list();
-			System.out.println("1.Would like to place a Order ? 2.Clear Cart..");
+			System.out.print("1.Would like to place a Order ? 2.Clear Cart..");
 			j = s.nextInt();
 			if(j==1)
 			{
