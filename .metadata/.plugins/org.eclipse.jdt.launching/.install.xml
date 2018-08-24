@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-<entry loc="C:\Program Files\Java\jre1.8.0_181" stamp="1532152893868"/>
-<entry loc="C:\Program Files\Java\jre1.8.0_45" stamp="1507859506479"/>
-<entry loc="C:\Program Files\Java\jre1.8.0_171" stamp="1525071931694"/>
+    <entry loc="C:\Program Files\Java\jre1.8.0_181" stamp="1532152893868"/>
+    <entry loc="C:\Program Files\Java\jre1.8.0_45" stamp="1507859506479"/>
+    <entry loc="/usr/lib/jvm/java-10-oracle" stamp="1534488143179"/>
+    <entry loc="C:\Program Files\Java\jre1.8.0_171" stamp="1525071931694"/>
 </dirs>
